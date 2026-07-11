@@ -51,18 +51,10 @@ export default function Home() {
           >
             <Link
               to="/catalogo"
-              className="bg-gold hover:bg-gold-light text-black font-body font-semibold tracking-widest uppercase text-sm px-8 py-3.5 rounded-full transition-colors duration-300"
+              className="bg-gold hover:bg-gold-light text-black font-body font-semibold tracking-widest uppercase text-sm px-10 py-3.5 rounded-full transition-colors duration-300"
             >
               Explorar catálogo
             </Link>
-            <a
-              href="https://wa.me/50600000000"
-              target="_blank"
-              rel="noreferrer"
-              className="border border-gold text-gold font-body tracking-widest uppercase text-sm px-8 py-3.5 rounded-full hover:bg-gold hover:text-black transition-colors duration-300"
-            >
-              Agendar visita
-            </a>
           </motion.div>
         </div>
 
@@ -94,9 +86,19 @@ export default function Home() {
               >
                 <Link
                   to={`/catalogo?categoria=${cat.slug}`}
-                  className="group flex flex-col items-center text-center gap-3 p-5 border border-gold/10 rounded-lg hover:border-gold/40 hover:bg-ink-soft transition-all duration-300"
+                  className={`group flex flex-col items-center text-center gap-3 p-5 border rounded-lg transition-all duration-300 ${
+                    cat.slug === 'coleccion-especial'
+                      ? 'border-rose/25 hover:border-rose/60 hover:bg-ink-soft'
+                      : 'border-gold/10 hover:border-gold/40 hover:bg-ink-soft'
+                  }`}
                 >
-                  <div className="w-14 h-14 rounded-full border border-gold/30 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-black transition-colors duration-300">
+                  <div
+                    className={`w-14 h-14 rounded-full border flex items-center justify-center transition-colors duration-300 ${
+                      cat.slug === 'coleccion-especial'
+                        ? 'border-rose/40 text-rose-light group-hover:bg-rose group-hover:text-white'
+                        : 'border-gold/30 text-gold group-hover:bg-gold group-hover:text-black'
+                    }`}
+                  >
                     <CategoryIcon name={cat.icon} className="w-6 h-6" />
                   </div>
                   <span className="font-display text-gold-light text-sm md:text-base">{cat.name}</span>
@@ -129,23 +131,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* COLECCIÓN ESPECIAL / CUSTOM */}
-      <section className="relative bg-black py-28 px-5 md:px-10 border-t border-gold/10 overflow-hidden">
+      {/* COLECCIÓN ESPECIAL / CUSTOM — acento en rosado, exclusivo de esta sección */}
+      <section className="relative bg-black py-28 px-5 md:px-10 border-t border-rose/20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-rose/[0.06] via-transparent to-transparent pointer-events-none" />
         <SparkleField count={10} />
         <div className="relative max-w-4xl mx-auto text-center">
           <div className="flex justify-center mb-6">
-            <div className="w-16 h-16 rounded-full border border-gold flex items-center justify-center text-gold">
+            <div className="w-16 h-16 rounded-full border border-rose flex items-center justify-center text-rose-light shadow-rose-glow">
               <IconSparkle className="w-7 h-7" />
             </div>
           </div>
-          <h2 className="font-display text-3xl md:text-5xl text-shimmer mb-6">Colección Especial, diseñada solo para ti</h2>
+          <p className="text-rose-light/70 text-xs tracking-[0.35em] uppercase mb-3">Piezas únicas · edición limitada</p>
+          <h2 className="font-display text-3xl md:text-5xl text-shimmer-rose mb-6">Colección Especial, diseñada solo para ti</h2>
           <p className="text-gold-light/60 max-w-2xl mx-auto leading-relaxed mb-10">
             Trabajamos junto a nuestros joyeros maestros para crear piezas únicas: tú eliges el metal, la piedra
             y el grabado. Cada creación pasa por un proceso artesanal pensado para un solo dueño.
           </p>
           <Link
             to="/catalogo?categoria=coleccion-especial"
-            className="inline-block bg-gold hover:bg-gold-light text-black font-body font-semibold tracking-widest uppercase text-sm px-8 py-3.5 rounded-full transition-colors duration-300"
+            className="inline-block bg-rose hover:bg-rose-light text-white hover:text-black font-body font-semibold tracking-widest uppercase text-sm px-8 py-3.5 rounded-full transition-colors duration-300 shadow-rose-glow"
           >
             Descubrir la colección
           </Link>
