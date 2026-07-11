@@ -68,20 +68,28 @@ export default function Catalog() {
           >
             Todas
           </button>
-          {categories.map((cat) => (
-            <button
-              key={cat.slug}
-              onClick={() => setCategory(cat.slug)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm tracking-wide border transition-colors duration-300 ${
-                activeCategory === cat.slug
-                  ? 'bg-gold text-black border-gold'
-                  : 'border-gold/20 text-gold-light/70 hover:border-gold/50'
-              }`}
-            >
-              <CategoryIcon name={cat.icon} className="w-4 h-4" />
-              {cat.name}
-            </button>
-          ))}
+          {categories.map((cat) => {
+            const isSpecial = cat.slug === 'coleccion-especial';
+            const isActive = activeCategory === cat.slug;
+            return (
+              <button
+                key={cat.slug}
+                onClick={() => setCategory(cat.slug)}
+                className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm tracking-wide border transition-colors duration-300 ${
+                  isActive
+                    ? isSpecial
+                      ? 'bg-rose text-white border-rose'
+                      : 'bg-gold text-black border-gold'
+                    : isSpecial
+                      ? 'border-rose/30 text-rose-light/80 hover:border-rose/60'
+                      : 'border-gold/20 text-gold-light/70 hover:border-gold/50'
+                }`}
+              >
+                <CategoryIcon name={cat.icon} className="w-4 h-4" />
+                {cat.name}
+              </button>
+            );
+          })}
         </div>
 
         {/* Grid de productos */}
