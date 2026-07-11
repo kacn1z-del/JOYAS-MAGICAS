@@ -69,6 +69,15 @@ body {
   -webkit-text-fill-color: transparent;
   animation: shimmer 4s linear infinite;
 }
+/* Silver shimmer text — plateado cálido (platino), exclusivo del título del Hero */
+.text-shimmer-silver {
+  background: linear-gradient(110deg, #8C8C82 20%, #E8E8E0 40%, #C8C8BE 60%, #8C8C82 80%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s linear infinite;
+}
 
 /* Sparkle particles */
 .sparkle {
