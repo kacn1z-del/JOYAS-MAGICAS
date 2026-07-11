@@ -57,7 +57,7 @@ export default function ProductDetail() {
               className="w-full h-full object-cover"
             />
             {product.special && (
-              <span className="absolute top-4 left-4 bg-gold text-black text-xs tracking-widest uppercase px-3 py-1.5 rounded-full font-semibold">
+              <span className="absolute top-4 left-4 bg-rose text-white text-xs tracking-widest uppercase px-3 py-1.5 rounded-full font-semibold">
                 Edición limitada
               </span>
             )}
