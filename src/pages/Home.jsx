@@ -156,7 +156,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CITA / GARANTÍA */}
+      {/* GARANTÍA */}
       <section className="bg-gold-light py-20 px-5 md:px-10">
         <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-10 text-center">
           <div>
@@ -165,7 +165,7 @@ export default function Home() {
           </div>
           <div>
             <h3 className="font-display text-black text-lg mb-2">Atención personalizada</h3>
-            <p className="text-black/60 text-sm leading-relaxed">Agenda una cita privada en tienda o conversa con nuestro asesor virtual las 24 horas.</p>
+            <p className="text-black/60 text-sm leading-relaxed">Visítanos en tienda o conversa con nuestro asesor virtual las 24 horas.</p>
           </div>
           <div>
             <h3 className="font-display text-black text-lg mb-2">Diseño a la medida</h3>
