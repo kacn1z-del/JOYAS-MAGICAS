@@ -52,14 +52,6 @@ export default function Header() {
               {link.label}
             </NavLink>
           ))}
-          <a
-            href="https://wa.me/50600000000"
-            target="_blank"
-            rel="noreferrer"
-            className="border border-gold text-gold text-sm tracking-widest uppercase px-5 py-2 rounded-full hover:bg-gold hover:text-black transition-colors duration-300"
-          >
-            Agendar visita
-          </a>
         </nav>
 
         <button
@@ -93,14 +85,6 @@ export default function Header() {
                   {link.label}
                 </NavLink>
               ))}
-              <a
-                href="https://wa.me/50600000000"
-                target="_blank"
-                rel="noreferrer"
-                className="mt-2 text-center border border-gold text-gold text-sm tracking-widest uppercase px-5 py-3 rounded-full"
-              >
-                Agendar visita
-              </a>
             </div>
           </motion.div>
         )}
