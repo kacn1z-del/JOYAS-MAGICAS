@@ -60,6 +60,16 @@ body {
   to { background-position: -200% center; }
 }
 
+/* Rose shimmer text — exclusivo para la Colección Especial */
+.text-shimmer-rose {
+  background: linear-gradient(110deg, #8C4F58 20%, #E8B4B8 40%, #B76E79 60%, #8C4F58 80%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s linear infinite;
+}
+
 /* Sparkle particles */
 .sparkle {
   position: absolute;
