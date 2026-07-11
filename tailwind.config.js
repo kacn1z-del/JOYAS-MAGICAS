@@ -12,6 +12,11 @@ export default {
           light: '#F7E7B0',
           dark: '#A8842A',
         },
+        rose: {
+          DEFAULT: '#B76E79',
+          light: '#E8B4B8',
+          dark: '#8C4F58',
+        },
         ink: {
           DEFAULT: '#000000',
           soft: '#1A1A1A',
@@ -28,6 +33,7 @@ export default {
       boxShadow: {
         'gold-glow': '0 0 30px rgba(212, 175, 55, 0.35)',
         'gold-glow-lg': '0 0 60px rgba(212, 175, 55, 0.25)',
+        'rose-glow': '0 0 30px rgba(183, 110, 121, 0.35)',
       },
     },
   },
