@@ -102,7 +102,7 @@ export default function ProductDetail() {
                 to="/contacto"
                 className="flex items-center justify-center border border-gold text-gold text-sm tracking-wide px-8 py-3.5 rounded-full hover:bg-gold hover:text-black transition-colors duration-300"
               >
-                Agendar cita
+               Más información
               </Link>
             </div>
 
