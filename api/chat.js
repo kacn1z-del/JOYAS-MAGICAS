@@ -1,5 +1,5 @@
 // Función serverless de Vercel (Node.js runtime).
-// Recibe el historial de mensajes del chat y responde usando Gemini 2.5 Flash.
+// Recibe el historial de mensajes del chat y responde usando Gemini.
 // Requiere la variable de entorno GEMINI_API_KEY configurada en Vercel.
 
 const SYSTEM_PROMPT = `Eres el asistente virtual de "Joyas Mágicas", una joyería de lujo en Costa Rica cuyo lema es "Donde la elegancia se convierte en magia".
@@ -37,7 +37,7 @@ export default async function handler(req, res) {
     }));
 
     const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${apiKey}`
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${apiKey}`,
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
