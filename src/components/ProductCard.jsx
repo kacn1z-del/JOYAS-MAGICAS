@@ -26,7 +26,7 @@ export default function ProductCard({ product, index = 0 }) {
             className="w-full h-full object-cover"
           />
           {product.special && (
-            <span className="absolute top-3 left-3 bg-gold text-black text-[10px] tracking-widest uppercase px-2.5 py-1 rounded-full font-body font-semibold">
+            <span className="absolute top-3 left-3 bg-rose text-white text-[10px] tracking-widest uppercase px-2.5 py-1 rounded-full font-body font-semibold">
               Edición limitada
             </span>
           )}
